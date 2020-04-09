@@ -56,12 +56,13 @@
 		D909EED2243FB75C0007738B /* Covit-19-Stats */ = {
 			isa = PBXGroup;
 			children = (
+				D94231BC243FB88B006CFE55 /* Views */,
 				D909EED3243FB75C0007738B /* AppDelegate.swift */,
 				D909EED5243FB75C0007738B /* SceneDelegate.swift */,
-				D909EED7243FB75C0007738B /* ContentView.swift */,
-				D909EED9243FB75F0007738B /* Assets.xcassets */,
-				D909EEDE243FB75F0007738B /* LaunchScreen.storyboard */,
-				D909EEE1243FB75F0007738B /* Info.plist */,
+				D94231BA243FB801006CFE55 /* ViewModel */,
+				D909EEE8243FB7A30007738B /* Service */,
+				D909EEE7243FB77E0007738B /* Model */,
+				D94231BB243FB836006CFE55 /* Resources */,
 				D909EEDB243FB75F0007738B /* Preview Content */,
 			);
 			path = "Covit-19-Stats";
@@ -73,6 +74,45 @@
 				D909EEDC243FB75F0007738B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D909EEE7243FB77E0007738B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D909EEE8243FB7A30007738B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D94231BA243FB801006CFE55 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D94231BB243FB836006CFE55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D909EED9243FB75F0007738B /* Assets.xcassets */,
+				D909EEE1243FB75F0007738B /* Info.plist */,
+				D909EEDE243FB75F0007738B /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D94231BC243FB88B006CFE55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D909EED7243FB75C0007738B /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +328,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Covit-19-Stats/Preview Content\"";
 				DEVELOPMENT_TEAM = KBL432CXA8;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Covit-19-Stats/Info.plist";
+				INFOPLIST_FILE = "Covit-19-Stats/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +348,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Covit-19-Stats/Preview Content\"";
 				DEVELOPMENT_TEAM = KBL432CXA8;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Covit-19-Stats/Info.plist";
+				INFOPLIST_FILE = "Covit-19-Stats/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
