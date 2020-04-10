@@ -13,6 +13,7 @@ class StatsViewModel: ObservableObject{
     
     private var statsService:StatsService!
     @Published var statsData = WorldTotal()
+    
     init(endPoints: EndPoints){
         self.statsService = StatsService()
         getWorldTotalData(endPoints: endPoints)

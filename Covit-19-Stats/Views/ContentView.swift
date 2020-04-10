@@ -20,7 +20,7 @@ struct ContentView: View {
 
     var body: some View {
         
-        Text(dataVM.createdDate)
+        Text(dataVM.newCases)
     }
 }
 
