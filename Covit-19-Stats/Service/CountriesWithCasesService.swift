@@ -1,5 +1,5 @@
 //
-//  CoutriesEffected.swift
+//  CountriesWithCases.swift
 //  Covit-19-Stats
 //
 //  Created by Abdul Meraj on 4/10/20.
@@ -7,11 +7,10 @@
 //
 
 import Foundation
-
-class CountriesEffectedBy{
+class CountriesWithCasesService{
     
-    func getData(endPoints:EndPoints, completion: @escaping (CountriesEffected?) -> ()){
-        guard let url = URL(string: endPoints.value)else{
+    func getData(endPoints:EndPoints, completion:@escaping (CoutriesByCases?) -> ()){
+        guard let url = URL(string: endPoints.value) else{
             completion(nil)
             return
         }
@@ -25,12 +24,14 @@ class CountriesEffectedBy{
                 return
             }
             do{
-                let dataObjc = try JSONDecoder().decode(CountriesEffected.self, from: data)
-                completion(dataObjc)
+               let dataObj =  try JSONDecoder().decode(CoutriesByCases.self, from: data)
+                completion(dataObj)
             }catch let error {
                 completion(nil)
                 print(error.localizedDescription)
             }
+            let str = String(data: data, encoding: String.Encoding.utf8)!
+            print(str)
         }.resume()
     }
 }

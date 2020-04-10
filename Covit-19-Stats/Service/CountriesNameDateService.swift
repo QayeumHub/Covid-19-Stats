@@ -1,5 +1,5 @@
 //
-//  JohnHopkinStats.swift
+//  CountriesNameDateService.swift
 //  Covit-19-Stats
 //
 //  Created by Abdul Meraj on 4/10/20.
@@ -8,9 +8,12 @@
 
 import Foundation
 
-class JohnHopkinStats {
-    func getData(endPoints:EndPoints, completion: @escaping (JohnHopkinByState?) -> ()){
-        guard let url = URL(string: endPoints.value) else{
+
+class CountriesNameDateService{
+    
+    func getData(endPoints: EndPoints, completion: @escaping (StatByCountryNameAndDate?)->()){
+        
+        guard let url = URL(string: endPoints.value) else {
             completion(nil)
             return
         }
@@ -19,12 +22,12 @@ class JohnHopkinStats {
         request.allHTTPHeaderFields = Constants.httpHeaderValues
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let data = data, error == nil else{
+            guard let data = data , error == nil else{
                 completion(nil)
                 return
             }
             do{
-                let dataObj = try JSONDecoder().decode(JohnHopkinByState.self, from: data)
+                let dataObj = try JSONDecoder().decode(StatByCountryNameAndDate.self, from: data)
                 completion(dataObj)
             }catch let error {
                 completion(nil)

@@ -74,7 +74,7 @@ class WorldStatsViewModel: ObservableObject{
     
     
     func getWorldTotalData(endPoints: EndPoints) {
-        self.statsService.getWorldStats(endPoints:endPoints) {(statsData) in
+        statsService.getWorldStats(endPoints:endPoints) {(statsData) in
             DispatchQueue.main.async {
                 self.statsData = statsData!
             }
