@@ -18,6 +18,10 @@
 		D94231C4243FBF6E006CFE55 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94231C3243FBF6E006CFE55 /* Stats.swift */; };
 		D94231C6243FCA68006CFE55 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94231C5243FCA68006CFE55 /* Enums.swift */; };
 		D96801F7244101C80083B0D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801F6244101C80083B0D5 /* Constants.swift */; };
+		D96801F9244105CE0083B0D5 /* CoutriesEffectedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801F8244105CE0083B0D5 /* CoutriesEffectedBy.swift */; };
+		D96801FB24410B380083B0D5 /* CountriesWithCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801FA24410B380083B0D5 /* CountriesWithCases.swift */; };
+		D96801FD24410EA90083B0D5 /* JohnHopkinStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801FC24410EA90083B0D5 /* JohnHopkinStats.swift */; };
+		D96801FF244115340083B0D5 /* LatestByCountyTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801FE244115340083B0D5 /* LatestByCountyTotal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		D94231C3243FBF6E006CFE55 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		D94231C5243FCA68006CFE55 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		D96801F6244101C80083B0D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D96801F8244105CE0083B0D5 /* CoutriesEffectedBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoutriesEffectedBy.swift; sourceTree = "<group>"; };
+		D96801FA24410B380083B0D5 /* CountriesWithCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesWithCases.swift; sourceTree = "<group>"; };
+		D96801FC24410EA90083B0D5 /* JohnHopkinStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnHopkinStats.swift; sourceTree = "<group>"; };
+		D96801FE244115340083B0D5 /* LatestByCountyTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestByCountyTotal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				D94231C1243FBEE4006CFE55 /* WorldStatsService.swift */,
+				D96801F8244105CE0083B0D5 /* CoutriesEffectedBy.swift */,
+				D96801FA24410B380083B0D5 /* CountriesWithCases.swift */,
+				D96801FC24410EA90083B0D5 /* JohnHopkinStats.swift */,
+				D96801FE244115340083B0D5 /* LatestByCountyTotal.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -213,8 +225,12 @@
 				D94231C4243FBF6E006CFE55 /* Stats.swift in Sources */,
 				D909EED4243FB75C0007738B /* AppDelegate.swift in Sources */,
 				D94231C0243FBE7F006CFE55 /* WorldStatsViewModel.swift in Sources */,
+				D96801FB24410B380083B0D5 /* CountriesWithCases.swift in Sources */,
 				D94231C6243FCA68006CFE55 /* Enums.swift in Sources */,
+				D96801FF244115340083B0D5 /* LatestByCountyTotal.swift in Sources */,
+				D96801F9244105CE0083B0D5 /* CoutriesEffectedBy.swift in Sources */,
 				D909EED6243FB75C0007738B /* SceneDelegate.swift in Sources */,
+				D96801FD24410EA90083B0D5 /* JohnHopkinStats.swift in Sources */,
 				D909EED8243FB75C0007738B /* ContentView.swift in Sources */,
 				D96801F7244101C80083B0D5 /* Constants.swift in Sources */,
 			);
