@@ -10,17 +10,17 @@ import SwiftUI
 import Combine
 struct ContentView: View {
     
-    @ObservedObject var dataVM:StatsViewModel
+    @ObservedObject var dataVM:WorldStatsViewModel
     
     init(){
-        self.dataVM = StatsViewModel(endPoints: EndPoints.worldsStats)
+        self.dataVM = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
       
     }
     
 
     var body: some View {
         
-        Text(dataVM.newCases)
+        Text(dataVM.createdDate)
     }
 }
 

@@ -9,13 +9,13 @@
 import Foundation
 import Combine
 
-class StatsViewModel: ObservableObject{
+class WorldStatsViewModel: ObservableObject{
     
-    private var statsService:StatsService!
+    private var statsService: WorldStatsService!
     @Published var statsData = WorldTotal()
     
     init(endPoints: EndPoints){
-        self.statsService = StatsService()
+        self.statsService = WorldStatsService()
         getWorldTotalData(endPoints: endPoints)
     }
     
@@ -60,13 +60,17 @@ class StatsViewModel: ObservableObject{
     
     var createdDate: String {
         if let date = statsData.statistic_taken_at {
-            return date
+            let f = DateFormatter()
+            f.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            f.timeZone = TimeZone(abbreviation: "UTC")
+            let date = f.date(from: date)
+            f.dateFormat = "MM/dd/yyyy hh:mm a"
+            f.timeZone = TimeZone.current
+            return f.string(from: date!)
         }else{
             return String()
         }
     }
-    
-
     
     
     func getWorldTotalData(endPoints: EndPoints) {
