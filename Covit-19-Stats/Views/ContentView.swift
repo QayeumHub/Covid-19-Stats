@@ -7,9 +7,23 @@
 //
 
 import SwiftUI
-
+import Combine
 struct ContentView: View {
+    
+    @ObservedObject var statsViewModel:StatsViewModel
+    
+    init(){
+        self.statsViewModel = StatsViewModel()
+        statsViewModel.getData(url: UrlStr.worldsStats)
+    }
+    
+    
+ 
+    
+    
+    
     var body: some View {
+        
         Text("Hello, World!")
     }
 }

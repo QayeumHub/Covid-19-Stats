@@ -19,7 +19,7 @@ class StatsViewModel: ObservableObject{
     }
     
     func getData(url: UrlStr) {
-        self.statsService.getStats(state: "", url: url) { (statsArr) in
+        self.statsService.getStats(state: "", urlStr: url) { (statsArr) in
             
         }
     }
