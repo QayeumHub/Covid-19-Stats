@@ -8,27 +8,22 @@
 
 import Foundation
 
-struct Stats: Decodable {
-    
-    
+
+struct WorldTotal: Decodable {
+    var total_cases: String?
+    var total_deaths: String?
+    var total_recovered: String?
+    var new_cases: String?
+    var new_deaths: String?
+    var statistic_taken_at: String?
 }
 
-
-struct WorldTotal {
-    var totalCases: String
-    var totalDeaths: String
-    var totalRecovered: String
-    var newCases: String
-    var newDeaths: String
-    var statisticTakenAt: String
-}
-
-struct CountriesEffected {
+struct CountriesEffected: Decodable {
     var affectedCountries: [String]
     var statisticTakenAt: String
 }
 
-struct StatByCountryNameAndDate {
+struct StatByCountryNameAndDate: Decodable {
     var id: String
     var countryName: String
     var totalCases: String
@@ -38,19 +33,18 @@ struct StatByCountryNameAndDate {
     var newDeaths: String
     var totalRecovered: String
     var seriousCritical: String
-    var region: NSNull
     var totalCasesPer1M: String
     var recordDate: String
 }
 
 
-struct CoutriesByCases {
+struct CoutriesByCases: Decodable {
     var countriesStat: [CountriesStat]
     var statisticTakenAt: String
 }
 
 // MARK: - CountriesStat
-struct CountriesStat {
+struct CountriesStat: Decodable{
     var countryName: String
     var cases: String
     var deaths: String
@@ -64,7 +58,7 @@ struct CountriesStat {
 }
 
 
-struct JohnHopkinByState {
+struct JohnHopkinByState:Decodable {
     var state: String
     var usaDeaths: [UsaDeath]
     var usaCasesByState: [UsaCasesByState]
@@ -72,27 +66,27 @@ struct JohnHopkinByState {
 }
 
 // MARK: - UsaCasesByState
-struct UsaCasesByState {
+struct UsaCasesByState:Decodable{
     var stateName: String
     var casesNumber: String
     var recordDate: String
 }
 
 // MARK: - UsaDeath
-struct UsaDeath {
+struct UsaDeath:Decodable {
     var stateName: String
     var deathCases: String
     var recordDate: String
 }
 
 
-struct LatestStatsByCountryTotal {
+struct LatestStatsByCountryTotal: Decodable {
     var country: String
     var latestStatByCountry: [ByCountryTotal]
 }
 
 // MARK: - LatestStatByCountry
-struct ByCountryTotal {
+struct ByCountryTotal:Decodable {
     var id: String
     var countryName: String
     var totalCases: String
@@ -102,7 +96,6 @@ struct ByCountryTotal {
     var newDeaths: String
     var totalRecovered: String
     var seriousCritical: String
-    var region: NSNull
     var totalCasesPer1M: String
     var recordDate: String
 }

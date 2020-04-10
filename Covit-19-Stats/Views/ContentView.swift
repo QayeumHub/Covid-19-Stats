@@ -10,21 +10,17 @@ import SwiftUI
 import Combine
 struct ContentView: View {
     
-    @ObservedObject var statsViewModel:StatsViewModel
+    @ObservedObject var dataVM:StatsViewModel
     
     init(){
-        self.statsViewModel = StatsViewModel()
-        statsViewModel.getData(url: UrlStr.worldsStats)
+        self.dataVM = StatsViewModel(endPoints: EndPoints.worldsStats)
+      
     }
     
-    
- 
-    
-    
-    
+
     var body: some View {
         
-        Text("Hello, World!")
+        Text(dataVM.createdDate)
     }
 }
 
