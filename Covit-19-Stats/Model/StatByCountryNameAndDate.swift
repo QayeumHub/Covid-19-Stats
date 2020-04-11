@@ -9,6 +9,11 @@
 import Foundation
 
 struct StatByCountryNameAndDate: Decodable {
+    var country: String?
+    var stat_by_country:[StatByDate]?
+}
+
+struct StatByDate: Decodable {
     var id: String?
     var country_name: String?
     var total_cases: String?
@@ -18,7 +23,8 @@ struct StatByCountryNameAndDate: Decodable {
     var new_deaths: String?
     var total_recovered: String?
     var serious_critical: String?
-    var total_cases_per1M: String?
-    var recordDate: String?
+    var total_cases_per_1m: String?
+    var record_date: String?
 }
+
 

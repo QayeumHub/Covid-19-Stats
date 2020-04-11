@@ -19,6 +19,38 @@ class JohnHopkinViewModel: ObservableObject{
         getData(endPoints: endPoints)
     }
     
+    var stateName:String {
+        if let data = data.state{
+            return data
+        }else{
+            return String()
+        }
+    }
+    
+    var stateCasesArr:[UsaCasesByState]{
+        if let data = data.usa_cases_by_state{
+            return data
+        }else{
+            return [UsaCasesByState]()
+        }
+    }
+    
+    var stateDeathsArr:[UsaDeath]{
+        if let data = data.usa_deaths{
+            return data
+        }else{
+            return [UsaDeath]()
+        }
+    }
+    
+    var ad:String {
+        if let data = data.ads{
+            return data
+        }else{
+            return String()
+        }
+    }
+    
     
     func getData (endPoints:EndPoints){
         service.getData(endPoints: endPoints) { (statsData) in

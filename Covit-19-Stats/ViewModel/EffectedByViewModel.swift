@@ -19,7 +19,21 @@ class EffectedByViewModel:ObservableObject{
         getData(endPoints: endPoints)
     }
     
+    var coutriesEffectedArr: [String]{
+        if let arr = data.affected_countries{
+            return arr
+        }else{
+            return [String]()
+        }
+    }
     
+    var createdDate: String {
+        if let date = data.statistic_taken_at {
+            return Date().formatDate(dateStr:date)
+        }else{
+            return String()
+        }
+    }
     
     func getData(endPoints:EndPoints){
         service.getData(endPoints: endPoints) {(statsData) in

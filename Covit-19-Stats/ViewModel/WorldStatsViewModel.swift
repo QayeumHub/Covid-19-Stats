@@ -60,13 +60,7 @@ class WorldStatsViewModel: ObservableObject{
     
     var createdDate: String {
         if let date = statsData.statistic_taken_at {
-            let f = DateFormatter()
-            f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            f.timeZone = TimeZone(abbreviation: "UTC")
-            let date = f.date(from: date)
-            f.dateFormat = "MM/dd/yyyy hh:mm a"
-            f.timeZone = TimeZone.current
-            return f.string(from: date!)
+            return Date().formatDate(dateStr:date)
         }else{
             return String()
         }

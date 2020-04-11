@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-class withCasesViwModel: ObservableObject{
+class WithCasesViwModel: ObservableObject{
     
     private var service: CountriesWithCasesService!
     @Published var data = CoutriesByCases()
@@ -19,6 +19,21 @@ class withCasesViwModel: ObservableObject{
         getDate(endPoints: endPoints)
     }
     
+    var countryArrDetails:[CountriesStat]{
+        if let data = data.countries_stat {
+            return data
+        }else{
+            return [CountriesStat]()
+        }
+    }
+    
+    var createdDate: String {
+        if let date = data.statistic_taken_at {
+            return Date().formatDate(dateStr:date)
+        }else{
+            return String()
+        }
+    }
     
     
     func getDate(endPoints:EndPoints){

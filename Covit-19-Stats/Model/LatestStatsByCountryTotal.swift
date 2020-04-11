@@ -23,6 +23,6 @@ struct ByCountryTotal:Decodable {
     var new_deaths: String?
     var total_recovered: String?
     var serious_critical: String?
-    var total_cases_per1M: String?
+    var total_cases_per1m: String?
     var record_date: String?
 }

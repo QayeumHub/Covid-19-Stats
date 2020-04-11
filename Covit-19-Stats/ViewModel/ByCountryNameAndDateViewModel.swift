@@ -1,5 +1,5 @@
 //
-//  LatestByCountryViewModel.swift
+//  ByCountryNameAndDate.swift
 //  Covit-19-Stats
 //
 //  Created by Abdul Meraj on 4/10/20.
@@ -9,34 +9,34 @@
 import Foundation
 import Combine
 
-class LatestByCountryViewModel: ObservableObject{
+class ByCountryNameAndDateViewModel: ObservableObject{
     
-    private var service: LatestByCountryTotalService!
-    @Published var data = LatestStatsByCountryTotal()
+    private var service:CountriesNameDateService!
+    @Published var data = StatByCountryNameAndDate()
     
     init(endPoints:EndPoints){
-        self.service = LatestByCountryTotalService()
+        self.service = CountriesNameDateService()
         getData(endPoints: endPoints)
     }
     
-    var country: String{
+    var country:String{
         if let data = data.country {
             return data
         }else{
             return String()
         }
     }
-    
-    var coutryTotalArr:[ByCountryTotal]{
-        if let data = data.latest_stat_by_country{
+    var countryByDateArr: [StatByDate]{
+        if let data = data.stat_by_country{
             return data
         }else{
-            return [ByCountryTotal]()
+            return [StatByDate]()
         }
     }
+   
     
     
-    func getData(endPoints: EndPoints){
+    func getData(endPoints:EndPoints){
         service.getData(endPoints: endPoints) { (statsData) in
             DispatchQueue.main.async {
                 self.data = statsData!

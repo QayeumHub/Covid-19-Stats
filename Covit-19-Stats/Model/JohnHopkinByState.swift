@@ -10,7 +10,7 @@ import Foundation
 struct JohnHopkinByState:Decodable {
     var state: String?
     var usa_deaths: [UsaDeath]?
-    var usa_casesByState: [UsaCasesByState]?
+    var usa_cases_by_state: [UsaCasesByState]?
     var ads: String?
 }
 

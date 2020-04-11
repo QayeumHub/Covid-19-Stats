@@ -24,5 +24,5 @@ struct CountriesStat: Decodable{
     var new_cases: String?
     var serious_critical: String?
     var active_cases: String?
-    var total_cases_per1M_population: String?
+    var total_cases_per_1m_population: String?
 }

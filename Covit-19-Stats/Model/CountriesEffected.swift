@@ -8,6 +8,6 @@
 
 import Foundation
 struct CountriesEffected: Decodable {
-    var affectedCountries: [String]?
-    var statisticTakenAt: String?
+    var affected_countries: [String]?
+    var statistic_taken_at: String?
 }

@@ -18,10 +18,10 @@ class CountriesNameDateService{
             return
         }
         var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        request.httpMethod = "GET" 
         request.allHTTPHeaderFields = Constants.httpHeaderValues
         
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data , error == nil else{
                 completion(nil)
                 return
@@ -33,6 +33,8 @@ class CountriesNameDateService{
                 completion(nil)
                 print(error.localizedDescription)
             }
-        }
+            let str = String(data: data, encoding: String.Encoding.utf8)!
+            print(str)
+        }.resume()
     }
 }

@@ -32,6 +32,8 @@
 		D968021124412B800083B0D5 /* CountriesEffected.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021024412B800083B0D5 /* CountriesEffected.swift */; };
 		D968021324412BA00083B0D5 /* JohnHopkinByState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021224412BA00083B0D5 /* JohnHopkinByState.swift */; };
 		D968021524412BC30083B0D5 /* LatestStatsByCountryTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021424412BC30083B0D5 /* LatestStatsByCountryTotal.swift */; };
+		D968021724412CE30083B0D5 /* ByCountryNameAndDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021624412CE30083B0D5 /* ByCountryNameAndDateViewModel.swift */; };
+		D9680219244167580083B0D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9680218244167580083B0D5 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		D968021024412B800083B0D5 /* CountriesEffected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesEffected.swift; sourceTree = "<group>"; };
 		D968021224412BA00083B0D5 /* JohnHopkinByState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JohnHopkinByState.swift; sourceTree = "<group>"; };
 		D968021424412BC30083B0D5 /* LatestStatsByCountryTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestStatsByCountryTotal.swift; sourceTree = "<group>"; };
+		D968021624412CE30083B0D5 /* ByCountryNameAndDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCountryNameAndDateViewModel.swift; sourceTree = "<group>"; };
+		D9680218244167580083B0D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				D9680202244120600083B0D5 /* WithCasesViewModel.swift */,
 				D9680204244124B10083B0D5 /* JohnHopkinViewModel.swift */,
 				D96802062441266B0083B0D5 /* LatestByCountryViewModel.swift */,
+				D968021624412CE30083B0D5 /* ByCountryNameAndDateViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				D909EED5243FB75C0007738B /* SceneDelegate.swift */,
 				D94231C5243FCA68006CFE55 /* Enums.swift */,
 				D96801F6244101C80083B0D5 /* Constants.swift */,
+				D9680218244167580083B0D5 /* DateExtension.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D968021124412B800083B0D5 /* CountriesEffected.swift in Sources */,
+				D9680219244167580083B0D5 /* DateExtension.swift in Sources */,
 				D9680203244120600083B0D5 /* WithCasesViewModel.swift in Sources */,
 				D968021324412BA00083B0D5 /* JohnHopkinByState.swift in Sources */,
 				D96802072441266B0083B0D5 /* LatestByCountryViewModel.swift in Sources */,
@@ -269,6 +276,7 @@
 				D909EED6243FB75C0007738B /* SceneDelegate.swift in Sources */,
 				D968021524412BC30083B0D5 /* LatestStatsByCountryTotal.swift in Sources */,
 				D968020B24412AA40083B0D5 /* WorldTotal.swift in Sources */,
+				D968021724412CE30083B0D5 /* ByCountryNameAndDateViewModel.swift in Sources */,
 				D96801FD24410EA90083B0D5 /* JohnHopkinStatsService.swift in Sources */,
 				D909EED8243FB75C0007738B /* ContentView.swift in Sources */,
 				D96801F7244101C80083B0D5 /* Constants.swift in Sources */,
