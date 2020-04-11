@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Covit-19-Stats.xcodeproj">
+      location = "self:/Users/Eagle/iOS_PROJECTS/Covit-19-Stats/Covid-19-Stats.xcodeproj">
    </FileRef>
 </Workspace>

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D909EECF243FB75C0007738B"
-               BuildableName = "Covit-19-Stats.app"
-               BlueprintName = "Covit-19-Stats"
-               ReferencedContainer = "container:Covit-19-Stats.xcodeproj">
+               BuildableName = "Covid-19-Stats.app"
+               BlueprintName = "Covid-19-Stats"
+               ReferencedContainer = "container:Covid-19-Stats.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D909EECF243FB75C0007738B"
-            BuildableName = "Covit-19-Stats.app"
-            BlueprintName = "Covit-19-Stats"
-            ReferencedContainer = "container:Covit-19-Stats.xcodeproj">
+            BuildableName = "Covid-19-Stats.app"
+            BlueprintName = "Covid-19-Stats"
+            ReferencedContainer = "container:Covid-19-Stats.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D909EECF243FB75C0007738B"
-            BuildableName = "Covit-19-Stats.app"
-            BlueprintName = "Covit-19-Stats"
-            ReferencedContainer = "container:Covit-19-Stats.xcodeproj">
+            BuildableName = "Covid-19-Stats.app"
+            BlueprintName = "Covid-19-Stats"
+            ReferencedContainer = "container:Covid-19-Stats.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
