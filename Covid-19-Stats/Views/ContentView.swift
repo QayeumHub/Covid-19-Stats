@@ -10,17 +10,23 @@ import SwiftUI
 import Combine
 struct ContentView: View {
     
-    @ObservedObject var dataVM:WorldStatsViewModel
-    
     init(){
-        self.dataVM = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
-      
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().backgroundColor = .black
     }
     
-
+    
     var body: some View {
-       //Text("Hello!")
-        Text(dataVM.createdDate)
+        NavigationView{
+        VStack(){
+            MainView()
+            MainTableView()
+        }
+            
+        .navigationBarTitle("Covid-19-Stats", displayMode: .inline)
+        }
+    .background(Color(red: 253 / 255, green: 253 / 255, blue: 253 / 255)
+    .edgesIgnoringSafeArea(.all))
     }
 }
 
@@ -29,3 +35,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

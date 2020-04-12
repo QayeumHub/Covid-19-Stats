@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct JohnHopkinByState:Decodable {
+struct JohnHopkinByState:Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var state: String?
     var usa_deaths: [UsaDeath]?
     var usa_cases_by_state: [UsaCasesByState]?
@@ -15,14 +16,16 @@ struct JohnHopkinByState:Decodable {
 }
 
 // MARK: - UsaCasesByState
-struct UsaCasesByState:Decodable{
+struct UsaCasesByState:Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var state_name: String?
     var cases_number: String?
     var record_date: String?
 }
 
 // MARK: - UsaDeath
-struct UsaDeath:Decodable {
+struct UsaDeath:Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var state_name: String?
     var death_cases: String?
     var record_date: String?

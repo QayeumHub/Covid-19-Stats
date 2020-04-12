@@ -8,13 +8,14 @@
 
 import Foundation
 
-struct StatByCountryNameAndDate: Decodable {
+struct StatByCountryNameAndDate: Hashable, Decodable {
+    var id = UUID()
     var country: String?
     var stat_by_country:[StatByDate]?
 }
 
-struct StatByDate: Decodable {
-    var id: String?
+struct StatByDate: Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var country_name: String?
     var total_cases: String?
     var new_cases: String?

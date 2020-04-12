@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct WorldTotal: Decodable {
+struct WorldTotal: Identifiable, Decodable {
+    var id:Int?
     var total_cases: String?
     var total_deaths: String?
     var total_recovered: String?

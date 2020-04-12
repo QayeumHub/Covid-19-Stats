@@ -21,7 +21,8 @@ class WithCasesViwModel: ObservableObject{
     
     var countryArrDetails:[CountriesStat]{
         if let data = data.countries_stat {
-            return data
+            let data1 = data.filter({$0.country_name != ""})
+            return data1
         }else{
             return [CountriesStat]()
         }
@@ -39,7 +40,9 @@ class WithCasesViwModel: ObservableObject{
     func getDate(endPoints:EndPoints){
         service.getData(endPoints: endPoints) { (statsData) in
             DispatchQueue.main.async {
-                self.data = statsData!
+                if let statsData = statsData {
+                  self.data = statsData
+                }
             }
         }
     }

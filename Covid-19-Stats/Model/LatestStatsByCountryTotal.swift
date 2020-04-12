@@ -7,14 +7,15 @@
 //
 
 import Foundation
-struct LatestStatsByCountryTotal: Decodable {
+struct LatestStatsByCountryTotal: Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var country: String?
     var latest_stat_by_country: [ByCountryTotal]?
 }
 
 // MARK: - LatestStatByCountry
-struct ByCountryTotal:Decodable {
-    var id: String?
+struct ByCountryTotal:Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var country_name: String?
     var total_cases: String?
     var new_cases: String?

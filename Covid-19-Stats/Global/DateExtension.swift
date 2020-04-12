@@ -12,7 +12,7 @@ extension Date{
     func formatDate(dateStr: String) -> String{
         let f = DateFormatter()
         f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        f.timeZone = TimeZone(abbreviation: "UTC")
+        f.timeZone = TimeZone(abbreviation: "GMT")
         var date:Date?
         date = f.date(from:dateStr)
         if  date == nil {

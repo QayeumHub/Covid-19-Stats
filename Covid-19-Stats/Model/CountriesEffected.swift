@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct CountriesEffected: Decodable {
+struct CountriesEffected:Hashable, Decodable {
+    var id:String? = UUID().uuidString
     var affected_countries: [String]?
     var statistic_taken_at: String?
 }

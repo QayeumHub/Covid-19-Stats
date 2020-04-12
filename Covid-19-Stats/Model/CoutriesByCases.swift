@@ -8,13 +8,15 @@
 
 import Foundation
 
-struct CoutriesByCases: Decodable {
+struct CoutriesByCases: Identifiable, Decodable {
+    var id:Int?
     var countries_stat: [CountriesStat]?
     var statistic_taken_at: String?
 }
 
 // MARK: - CountriesStat
-struct CountriesStat: Decodable{
+struct CountriesStat: Identifiable, Decodable {
+    var id:Int?
     var country_name: String?
     var cases: String?
     var deaths: String?
@@ -26,3 +28,5 @@ struct CountriesStat: Decodable{
     var active_cases: String?
     var total_cases_per_1m_population: String?
 }
+
+
