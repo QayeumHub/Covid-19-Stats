@@ -21,31 +21,32 @@ struct MainTableView: View {
                     HStack(){
                         Text("\(self.dataVM.countryArrDetails[i].country_name!)").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
                         VStack(spacing:3){
-                            HStack(){
-                                Text("Total Cases:").frame(width:100, alignment: .leading)
-                                Text("\(self.dataVM.countryArrDetails[i].cases!)").frame(width:100, alignment: .leading)
-                            }
-                            HStack(){
-                                Text("Total Deaths:").frame(width:100, alignment: .leading)
-                                Text("\(self.dataVM.countryArrDetails[i].deaths!)").frame(width:100, alignment: .leading)
-                            }
-                            HStack(){
-                                Text("Total Recovered:").frame(width:100, alignment: .leading)
-                                Text("\(self.dataVM.countryArrDetails[i].total_recovered!)").frame(width:100, alignment: .leading)
-                            }
+                                HStack(){
+                                    Text("Total Cases:").frame(width:100, alignment: .leading)
+                                    Text("\(self.dataVM.countryArrDetails[i].cases!)").frame(width:100, alignment: .leading)
+                                }
+                                HStack(){
+                                    Text("Total Deaths:").frame(width:100, alignment: .leading)
+                                    Text("\(self.dataVM.countryArrDetails[i].deaths!)").frame(width:100, alignment: .leading).foregroundColor(.red)
+                                }
+                                HStack(){
+                                    Text("Total Recovered:").frame(width:100, alignment: .leading)
+                                    Text("\(self.dataVM.countryArrDetails[i].total_recovered!)").frame(width:100, alignment: .leading).foregroundColor(.green)
+                                }
+                            
                             HStack(){
                                 Text("New Cases:").frame(width:100, alignment: .leading)
-                                Text("\(self.dataVM.countryArrDetails[i].new_deaths!)").frame(width:100, alignment: .leading)
+                                Text("\(self.dataVM.countryArrDetails[i].new_cases!)").frame(width:100, alignment: .leading)
                             }
                             HStack(){
                                 Text("New Deaths:").frame(width:100, alignment: .leading)
-                                Text("\(self.dataVM.countryArrDetails[i].new_deaths!)").frame(width:100, alignment: .leading)
+                                Text("\(self.dataVM.countryArrDetails[i].new_deaths!)").frame(width:100, alignment: .leading).foregroundColor(.red)
                             }
                         }
                         
                     }
                     
-                }.listRowBackground(Color.clear).frame(alignment: Alignment.leading).font(Font.custom("HelveticaNeue-UltraLight", size: 12))
+                }.listRowBackground(Color.clear).frame(alignment: Alignment.leading).font(Font.custom("HelveticaNeue-Light", size: 12))
             }.frame(maxHeight: 800, alignment: .top)
         }
     }

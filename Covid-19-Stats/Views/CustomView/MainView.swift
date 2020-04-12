@@ -17,39 +17,42 @@ struct MainView: View {
         
         VStack{
             ZStack(){
-                Image("main").resizable().frame(maxWidth:500, maxHeight:240
-                )
+                Image("main").resizable().frame(maxWidth:500, maxHeight:240)
                 VStack(){
                     Text("Data As Of: \(dataVM.createdDate)")
-                    VStack(){
-                        HStack(){
-                            Text("New Cases:").frame(maxWidth:80, alignment: .leading)
-                            Text(dataVM.newCases).font(Font.system(size: 20)).frame(maxWidth:120, alignment: .leading)
-                        }.frame(maxWidth:500)
-                        HStack(){
-                            Text("New Deaths:").frame(maxWidth:80, alignment: .leading)
-                            Text(dataVM.newDeaths).font(Font.system(size: 20)).frame(maxWidth:120, alignment: .leading)
-                        }.frame(maxWidth:500)
-                    }.frame(maxWidth: 500, maxHeight: 80, alignment: .leading)
-                    Group{
+                    Spacer()
+                    HStack(){
+                       Text("World").frame(maxWidth:80, alignment: .center).font(Font.system(size: 20))
+                    VStack{
                         HStack{
-                            Text("Total Cases:").frame(maxWidth:100, alignment: .leading)
+                            Text("Total Cases:").frame(maxWidth:110, alignment: .leading)
                             Text(dataVM.totalCases).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
                         }
                         HStack{
-                            Text("Total Deaths:").frame(maxWidth:100, alignment: .leading).frame(maxWidth:100, alignment: .leading)
-                            Text(dataVM.totalDeaths).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
+                            Text("Total Deaths:").frame(maxWidth:110, alignment: .leading)
+                            Text(dataVM.totalDeaths).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.red)
                         }
                         HStack{
-                            Text("Total Recovered:").frame(maxWidth:100, alignment: .leading).frame(maxWidth:100, alignment: .leading)
-                            Text(dataVM.totalRecovered).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
+                            Text("Total Recovered:").frame(maxWidth:110, alignment: .leading)
+                            Text(dataVM.totalRecovered).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.green)
                         }
-                    }.frame(maxWidth: 500, alignment: .leading)
-                    Spacer()
-                }
+                        HStack(){
+                            Text("New Cases:").frame(maxWidth:110, alignment: .leading)
+                            Text(dataVM.newCases).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
+                        }
+                        HStack(){
+                            Text("New Deaths:").frame(maxWidth:110, alignment: .leading)
+                            Text(dataVM.newDeaths).font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.red)
+                        }
+                    }
+                    }
+                    
+                }.frame(maxWidth: 500, alignment: .leading)
+                    
+                           
+                
             }
-            Spacer()
-        }.frame(height:180).padding().font(Font.custom("HelveticaNeue-UltraLight", size: 14))
+        }.frame(height:180).padding().font(Font.custom("HelveticaNeue-Light", size: 14))
         
     }
 }
