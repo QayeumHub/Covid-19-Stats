@@ -21,11 +21,11 @@
 		D96801FB24410B380083B0D5 /* CountriesWithCasesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801FA24410B380083B0D5 /* CountriesWithCasesService.swift */; };
 		D96801FF244115340083B0D5 /* ByCountyTotalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96801FE244115340083B0D5 /* ByCountyTotalService.swift */; };
 		D9680203244120600083B0D5 /* WithCasesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9680202244120600083B0D5 /* WithCasesViewModel.swift */; };
-		D96802072441266B0083B0D5 /* ByCountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96802062441266B0083B0D5 /* ByCountryViewModel.swift */; };
+		D96802072441266B0083B0D5 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96802062441266B0083B0D5 /* CountryViewModel.swift */; };
 		D968020B24412AA40083B0D5 /* WorldTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968020A24412AA40083B0D5 /* WorldTotal.swift */; };
 		D968020D24412B020083B0D5 /* CoutriesByCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968020C24412B020083B0D5 /* CoutriesByCases.swift */; };
-		D968021524412BC30083B0D5 /* ByCountryTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021424412BC30083B0D5 /* ByCountryTotal.swift */; };
-		D9680219244167580083B0D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9680218244167580083B0D5 /* DateExtension.swift */; };
+		D968021524412BC30083B0D5 /* CountryTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021424412BC30083B0D5 /* CountryTotal.swift */; };
+		D9680219244167580083B0D5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9680218244167580083B0D5 /* Extension.swift */; };
 		D9A6866A24425B3400E38438 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6866924425B3400E38438 /* MainView.swift */; };
 		D9A6866C2442A87000E38438 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6866B2442A87000E38438 /* MainTableView.swift */; };
 /* End PBXBuildFile section */
@@ -47,11 +47,11 @@
 		D96801FA24410B380083B0D5 /* CountriesWithCasesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesWithCasesService.swift; sourceTree = "<group>"; };
 		D96801FE244115340083B0D5 /* ByCountyTotalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCountyTotalService.swift; sourceTree = "<group>"; };
 		D9680202244120600083B0D5 /* WithCasesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithCasesViewModel.swift; sourceTree = "<group>"; };
-		D96802062441266B0083B0D5 /* ByCountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCountryViewModel.swift; sourceTree = "<group>"; };
+		D96802062441266B0083B0D5 /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		D968020A24412AA40083B0D5 /* WorldTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTotal.swift; sourceTree = "<group>"; };
 		D968020C24412B020083B0D5 /* CoutriesByCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoutriesByCases.swift; sourceTree = "<group>"; };
-		D968021424412BC30083B0D5 /* ByCountryTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByCountryTotal.swift; sourceTree = "<group>"; };
-		D9680218244167580083B0D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D968021424412BC30083B0D5 /* CountryTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTotal.swift; sourceTree = "<group>"; };
+		D9680218244167580083B0D5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D9A6866924425B3400E38438 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D9A6866B2442A87000E38438 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 			children = (
 				D968020A24412AA40083B0D5 /* WorldTotal.swift */,
 				D968020C24412B020083B0D5 /* CoutriesByCases.swift */,
-				D968021424412BC30083B0D5 /* ByCountryTotal.swift */,
+				D968021424412BC30083B0D5 /* CountryTotal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,7 +130,7 @@
 			children = (
 				D94231BF243FBE7F006CFE55 /* WorldStatsViewModel.swift */,
 				D9680202244120600083B0D5 /* WithCasesViewModel.swift */,
-				D96802062441266B0083B0D5 /* ByCountryViewModel.swift */,
+				D96802062441266B0083B0D5 /* CountryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 				D909EED5243FB75C0007738B /* SceneDelegate.swift */,
 				D94231C5243FCA68006CFE55 /* Enums.swift */,
 				D96801F6244101C80083B0D5 /* Constants.swift */,
-				D9680218244167580083B0D5 /* DateExtension.swift */,
+				D9680218244167580083B0D5 /* Extension.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -248,9 +248,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A6866C2442A87000E38438 /* MainTableView.swift in Sources */,
-				D9680219244167580083B0D5 /* DateExtension.swift in Sources */,
+				D9680219244167580083B0D5 /* Extension.swift in Sources */,
 				D9680203244120600083B0D5 /* WithCasesViewModel.swift in Sources */,
-				D96802072441266B0083B0D5 /* ByCountryViewModel.swift in Sources */,
+				D96802072441266B0083B0D5 /* CountryViewModel.swift in Sources */,
 				D906F4C82443B51500C44B41 /* States.swift in Sources */,
 				D94231C2243FBEE4006CFE55 /* WorldStatsService.swift in Sources */,
 				D909EED4243FB75C0007738B /* AppDelegate.swift in Sources */,
@@ -261,7 +261,7 @@
 				D94231C6243FCA68006CFE55 /* Enums.swift in Sources */,
 				D96801FF244115340083B0D5 /* ByCountyTotalService.swift in Sources */,
 				D909EED6243FB75C0007738B /* SceneDelegate.swift in Sources */,
-				D968021524412BC30083B0D5 /* ByCountryTotal.swift in Sources */,
+				D968021524412BC30083B0D5 /* CountryTotal.swift in Sources */,
 				D968020B24412AA40083B0D5 /* WorldTotal.swift in Sources */,
 				D909EED8243FB75C0007738B /* ContentView.swift in Sources */,
 				D96801F7244101C80083B0D5 /* Constants.swift in Sources */,

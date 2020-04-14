@@ -10,7 +10,7 @@ import Foundation
 
 class ByCountryTotalService{
     
-    func getData(endPoints:EndPoints, completion: @escaping (ByCountryTotal?) -> ()){
+    func getData(endPoints:EndPoints, completion: @escaping (CountryTotal?) -> ()){
         guard let url = URL(string: endPoints.value) else{
             completion(nil)
             return
@@ -25,7 +25,7 @@ class ByCountryTotalService{
                 return
             }
             do{
-                let dataObj = try JSONDecoder().decode(ByCountryTotal.self, from: data)
+                let dataObj = try JSONDecoder().decode(CountryTotal.self, from: data)
                 completion(dataObj)
             }catch let error{
                 completion(nil)

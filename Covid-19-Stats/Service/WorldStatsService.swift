@@ -16,7 +16,6 @@ class WorldStatsService{
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.allHTTPHeaderFields = Constants.httpHeaderValues
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else{
                 completion(nil)

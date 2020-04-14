@@ -30,8 +30,8 @@ class CountriesWithCasesService{
                 completion(nil)
                 print(error.localizedDescription)
             }
-            let str = String(data: data, encoding: String.Encoding.utf8)!
-            print(str)
+//            let str = String(data: data, encoding: String.Encoding.utf8)!
+//            print(str)
         }.resume()
     }
 }

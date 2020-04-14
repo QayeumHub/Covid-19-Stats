@@ -27,3 +27,11 @@ extension Date{
         return f.string(from: date!)
     }
 }
+
+extension Int{
+    func formatNumber() -> String {
+        let f = NumberFormatter()
+        f.numberStyle = .decimal
+        return f.string(from: NSNumber(value: self))!
+    }
+}

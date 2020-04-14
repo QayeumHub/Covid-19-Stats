@@ -9,10 +9,10 @@
 import Foundation
 import Combine
 
-class ByCountryViewModel: ObservableObject{
+class CountryViewModel: ObservableObject{
     
     private var service: ByCountryTotalService!
-    @Published var data = ByCountryTotal()
+    @Published var data = CountryTotal()
     
     init(endPoints:EndPoints){
         self.service = ByCountryTotalService()

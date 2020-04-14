@@ -9,17 +9,18 @@
 import Foundation
 
 enum EndPoints {
-    case countriesEffected
+    case countryStats (countryName: String)
     case coutriesByCases
     case worldsStats
     var value:String {
         switch self {
         case.worldsStats:
-            return "https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php"
-        case .countriesEffected:
-            return "https://coronavirus-monitor.p.rapidapi.com/coronavirus/affected.php"
+            return "https://api.thevirustracker.com/free-api?global=stats"
         case .coutriesByCases:
-            return "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php"
+                return "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php"
+        case .countryStats(let counrtyName):
+            return "https://covid19-api.weedmark.systems/api/v1/stats?country=\(counrtyName)"
+
         }
     }
 }
