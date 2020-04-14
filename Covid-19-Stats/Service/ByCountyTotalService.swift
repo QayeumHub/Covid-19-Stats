@@ -8,16 +8,16 @@
 
 import Foundation
 
-class LatestByCountryTotalService{
+class ByCountryTotalService{
     
-    func getData(endPoints:EndPoints, completion: @escaping (LatestStatsByCountryTotal?) -> ()){
+    func getData(endPoints:EndPoints, completion: @escaping (ByCountryTotal?) -> ()){
         guard let url = URL(string: endPoints.value) else{
             completion(nil)
             return
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.allHTTPHeaderFields = Constants.httpHeaderValues
+        //request.allHTTPHeaderFields = Constants.httpHeaderValues
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data , error == nil else{
@@ -25,7 +25,7 @@ class LatestByCountryTotalService{
                 return
             }
             do{
-                let dataObj = try JSONDecoder().decode(LatestStatsByCountryTotal.self, from: data)
+                let dataObj = try JSONDecoder().decode(ByCountryTotal.self, from: data)
                 completion(dataObj)
             }catch let error{
                 completion(nil)
