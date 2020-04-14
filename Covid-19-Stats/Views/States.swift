@@ -19,7 +19,7 @@ struct States: View {
     
     var body: some View {
         NavigationView{
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(countryName)
              .navigationBarTitle("States Covit-91 Stats", displayMode: .inline)
         }
     }
