@@ -20,80 +20,72 @@ class WorldStatsViewModel: ObservableObject{
     }
     
     var totalCases:String{
-        if let data = data.worldTotal{
-            return data.totalCases!.formatNumber()
+        if let data = data.Global?.TotalConfirmed{
+            return data.formatNumber()
         }else{
             return String()
         }
     }
     
     var totalRecovered:String{
-        if let data = data.worldTotal{
-            return  data.totalRecovered!.formatNumber()
+        if let data = data.Global?.TotalRecovered{
+            return  data.formatNumber()
         }else{
             return String()
         }
     }
-    
-    var totalUnresolved:String{
-        if let data = data.worldTotal{
-            return data.totalUnresolved!.formatNumber()
-        }else{
-            return String()
-        }
-    }
-    
      var totalDeaths:String{
-         if let data = data.worldTotal{
-             return data.totalDeaths!.formatNumber()
+        if let data = data.Global?.TotalDeaths{
+             return data.formatNumber()
          }else{
              return String()
          }
      }
-     
+
     var totalNewCasesToday:String{
-        if let data = data.worldTotal{
-            return data.totalNewCasesToday!.formatNumber()
+        if let data = data.Global?.NewConfirmed{
+            return data.formatNumber()
         }else{
             return String()
         }
     }
-    
+
     var totalNewDeathsToday:String{
-        if let data = data.worldTotal{
-            return data.totalNewDeathsToday!.formatNumber()
+        if let data = data.Global?.NewDeaths{
+            return data.formatNumber()
+        }else{
+            return String()
+        }
+    }
+
+    var totalNewRecoderedToday:String{
+        if let data = data.Global?.NewRecovered{
+            return data.formatNumber()
         }else{
             return String()
         }
     }
     
-    var totalActiveCases:String{
-        if let data = data.worldTotal{
-            return data.totalActiveCases!.formatNumber()
+    var reportDate:String{
+        if let data = data.Date{
+            return data
         }else{
             return String()
         }
     }
-    
-    var totalSeriousCases:String{
-        if let data = data.worldTotal{
-            return String(format: "%ld", data.totalSeriousCases!)
+
+    var coutriesTotal:[Countries]{
+        if let data = data.Countries{
+            return data
         }else{
-            return String()
+            return [Countries]()
         }
     }
-    var totalAffectedCountries:String{
-        if let data = data.worldTotal{
-            return String(format: "%ld", data.totalAffectedCountries!)
-        }else{
-            return String()
-        }
-    }
+   
     
     
     
-    
-    func getWorldTotalData(endPoints: EndPoints) {
+    private func getWorldTotalData(endPoints: EndPoints) {
         statsService.getWorldStats(endPoints:endPoints) {(statsData) in
             DispatchQueue.main.async {
                 if let statsData = statsData {

@@ -13,13 +13,13 @@ struct MainView: View {
     init(){
         self.dataVM = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
     }
-
+ 
     var body: some View {
         VStack{
             ZStack(){
                 Image("main").resizable().frame(maxWidth:500, maxHeight:240)
                 VStack(){
-                    Text("\(Date())")
+                    Text("\(dataVM.reportDate)")
                     Spacer()
                     HStack(){
                        Text("World").frame(maxWidth:80, alignment: .center).font(Font.system(size: 20))

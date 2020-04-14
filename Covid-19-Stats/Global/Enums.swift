@@ -15,7 +15,7 @@ enum EndPoints {
     var value:String {
         switch self {
         case.worldsStats:
-            return "https://api.thevirustracker.com/free-api?global=stats"
+            return "https://api.covid19api.com/summary"
         case .coutriesByCases:
                 return "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php"
         case .countryStats(let counrtyName):
