@@ -11,20 +11,17 @@ import Foundation
 extension Date{
     func formatDate(dateStr: String) -> String{
         let f = DateFormatter()
-        f.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        f.timeZone = TimeZone(abbreviation: "GMT")
+        f.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        f.timeZone = TimeZone(abbreviation: "UTC")
         var date:Date?
         date = f.date(from:dateStr)
-        if  date == nil {
-            f.dateFormat = "yyyy-MM-dd HH:mm:ss.sss"
-            date = f.date(from:dateStr)
-        }
-        if  date == nil {
-            date = Date()
-        }
         f.dateFormat = "MM/dd/yyyy hh:mm a"
         f.timeZone = TimeZone.current
-        return f.string(from: date!)
+        var dateStr = String()
+        if let date = date {
+           dateStr = f.string(from: date)
+        }
+       return dateStr
     }
 }
 

@@ -68,7 +68,7 @@ class WorldStatsViewModel: ObservableObject{
     
     var reportDate:String{
         if let data = data.Date{
-            return data
+            return Date().formatDate(dateStr: data)
         }else{
             return String()
         }
@@ -76,7 +76,8 @@ class WorldStatsViewModel: ObservableObject{
 
     var coutriesTotal:[Countries]{
         if let data = data.Countries{
-            return data
+            let datasorted = data.sorted(by: {$0.TotalConfirmed! > $1.TotalConfirmed!})
+            return datasorted
         }else{
             return [Countries]()
         }

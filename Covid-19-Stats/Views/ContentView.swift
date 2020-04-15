@@ -9,18 +9,19 @@
 import SwiftUI
 import Combine
 struct ContentView: View {
-    
+    @ObservedObject var dataVM:WorldStatsViewModel
     init(){
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().backgroundColor = .black
+        self.dataVM = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
     }
     
     
     var body: some View {
         NavigationView{
         VStack(){
-            MainView()
-            MainTableView()
+            MainView(reportDate:dataVM.reportDate, totalCases: dataVM.totalCases, totalDeaths: dataVM.totalDeaths, totalRecovered: dataVM.totalRecovered, totalNewCasesToday: dataVM.totalNewCasesToday, totalNewDeathsToday: dataVM.totalNewDeathsToday, totalNewRecoderedToday: dataVM.totalNewRecoderedToday)
+            MainTableView(countries: dataVM.coutriesTotal)
         }
             
         .navigationBarTitle("Covid-19-Stats", displayMode: .inline)

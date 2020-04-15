@@ -9,9 +9,16 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var dataVM:WorldStatsViewModel
-    init(){
-        self.dataVM = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
+var reportDate:String,totalCases:String,totalDeaths:String,totalRecovered:String,totalNewCasesToday:String,totalNewDeathsToday:String,totalNewRecoderedToday:String
+    init(reportDate:String,totalCases:String,totalDeaths:String,totalRecovered:String,totalNewCasesToday:String,totalNewDeathsToday:String,totalNewRecoderedToday:String){
+        self.reportDate = reportDate
+        self.totalCases = totalCases
+        self.totalDeaths = totalDeaths
+        self.totalRecovered = totalRecovered
+        self.totalNewCasesToday = totalNewCasesToday
+        self.totalNewDeathsToday = totalNewDeathsToday
+        self.totalNewRecoderedToday = totalNewRecoderedToday
+        
     }
  
     var body: some View {
@@ -19,30 +26,38 @@ struct MainView: View {
             ZStack(){
                 Image("main").resizable().frame(maxWidth:500, maxHeight:240)
                 VStack(){
-                    Text("\(dataVM.reportDate)")
+                    Text("\(reportDate)")
                     Spacer()
                     HStack(){
-                       Text("World").frame(maxWidth:80, alignment: .center).font(Font.system(size: 20))
+                        VStack{
+                            Text("World").frame(maxWidth:90, alignment: .center).font(Font.system(size: 20))
+                            Text("confirmed").frame(maxWidth:90, alignment: .center).font(Font.system(size: 14))
+                            Text("cases").frame(maxWidth:90, alignment: .center).font(Font.system(size: 14))
+                        }
                     VStack{
                         HStack{
-                            Text("Total Cases:").frame(maxWidth:110, alignment: .leading)
-                            Text("\(dataVM.totalCases)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
+                            Text("Total Cases:").frame(maxWidth:105, alignment: .leading)
+                            Text("\(totalCases)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
                         }
                         HStack{
-                            Text("Total Deaths:").frame(maxWidth:110, alignment: .leading)
-                            Text("\(dataVM.totalDeaths)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.red)
+                            Text("Total Deaths:").frame(maxWidth:105, alignment: .leading)
+                            Text("\(totalDeaths)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.red)
                         }
                         HStack{
-                            Text("Total Recovered:").frame(maxWidth:110, alignment: .leading)
-                            Text("\(dataVM.totalRecovered)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.green)
+                            Text("Total Recovered:").frame(maxWidth:105, alignment: .leading)
+                            Text("\(totalRecovered)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.green)
                         }
                         HStack(){
-                            Text("New Cases:").frame(maxWidth:110, alignment: .leading)
-                            Text("\(dataVM.totalNewCasesToday)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
+                            Text("New Cases:").frame(maxWidth:105, alignment: .leading)
+                            Text("\(totalNewCasesToday)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading)
                         }
                         HStack(){
-                            Text("New Deaths:").frame(maxWidth:110, alignment: .leading)
-                            Text("\(dataVM.totalNewDeathsToday)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.red)
+                            Text("New Deaths:").frame(maxWidth:105, alignment: .leading)
+                            Text("\(totalNewDeathsToday)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.red)
+                        }
+                        HStack(){
+                            Text("New Recovered:").frame(maxWidth:105, alignment: .leading)
+                            Text("\(totalNewRecoderedToday)").font(Font.system(size: 20)).frame(maxWidth:200, alignment: .leading).foregroundColor(.green)
                         }
                     }
                     }
@@ -57,8 +72,8 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
