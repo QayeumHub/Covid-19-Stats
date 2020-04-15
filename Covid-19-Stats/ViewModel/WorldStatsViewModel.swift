@@ -13,12 +13,14 @@ class WorldStatsViewModel: ObservableObject{
     
     private var statsService: WorldStatsService!
     @Published var data = WorldTotal()
+    @Published var showProgress = true
     
     init(endPoints: EndPoints){
         self.statsService = WorldStatsService()
         getWorldTotalData(endPoints: endPoints)
     }
     
+
     var totalCases:String{
         if let data = data.Global?.TotalConfirmed{
             return data.formatNumber()
@@ -89,8 +91,12 @@ class WorldStatsViewModel: ObservableObject{
     private func getWorldTotalData(endPoints: EndPoints) {
         statsService.getWorldStats(endPoints:endPoints) {(statsData) in
             DispatchQueue.main.async {
+                self.showProgress = true
                 if let statsData = statsData {
                     self.data = statsData
+                    self.showProgress = false
+                }else{
+                    self.showProgress = false
                 }
             }
         }

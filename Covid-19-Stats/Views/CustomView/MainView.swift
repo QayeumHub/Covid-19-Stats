@@ -27,7 +27,6 @@ var reportDate:String,totalCases:String,totalDeaths:String,totalRecovered:String
                 Image("main").resizable().frame(maxWidth:500, maxHeight:240)
                 VStack(){
                     Text("\(reportDate)")
-                    Spacer()
                     HStack(){
                         VStack{
                             Text("World").frame(maxWidth:90, alignment: .center).font(Font.system(size: 20))
