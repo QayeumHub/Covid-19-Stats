@@ -26,7 +26,7 @@ struct MainView: View {
             ZStack(){
                 Image("main").resizable().frame(maxWidth:500, maxHeight:240)
                 VStack(){
-                    Text("\(Date())")
+                    //Text("\(Date())")
                     HStack(){
                         VStack{
                             Text("World").frame(maxWidth:85, alignment: .center).font(Font.system(size: 20))
