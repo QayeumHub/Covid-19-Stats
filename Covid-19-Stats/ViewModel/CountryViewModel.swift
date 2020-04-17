@@ -19,22 +19,6 @@ class CountryViewModel: ObservableObject{
         getData(endPoints: endPoints)
     }
     
-//    var country: String{
-//        if let data = data.country {
-//            return data
-//        }else{
-//            return String()
-//        }
-//    }
-//
-//    var coutryTotalArr:[ByCountryTotal]{
-//        if let data = data.latest_stat_by_country{
-//            return data
-//        }else{
-//            return [ByCountryTotal]()
-//        }
-//    }
-    
     
     func getData(endPoints: EndPoints){
         service.getData(endPoints: endPoints) { (statsData) in

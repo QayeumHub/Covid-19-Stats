@@ -16,7 +16,7 @@ class CountriesWithCasesService{
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.allHTTPHeaderFields = Constants.httpHeaderValues
+        request.allHTTPHeaderFields = Constants.headers
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else{
@@ -30,8 +30,8 @@ class CountriesWithCasesService{
                 completion(nil)
                 print(error.localizedDescription)
             }
-//            let str = String(data: data, encoding: String.Encoding.utf8)!
-//            print(str)
+           // let str = String(data: data, encoding: String.Encoding.utf8)!
+           // print(str)
         }.resume()
     }
 }

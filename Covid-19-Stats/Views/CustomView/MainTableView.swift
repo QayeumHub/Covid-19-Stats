@@ -9,47 +9,46 @@
 import SwiftUI
 
 struct MainTableView: View {
-    var countries: [Countries]!
-    init(countries:[Countries]){
+    var countries: [Response]!
+    init(countries:[Response]){
         self.countries = countries
     }
- 
+    
+
     var body: some View {
             VStack(alignment: .leading){
                 List{
                     ForEach(countries.indices, id: \.self) { i in
-
-                            HStack(){
-                                NavigationLink(destination:LazyView(States(countryName: "\(self.countries[i].Country!)"))){
-                                Text("\(self.countries[i].Country!)").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
+                        HStack(){
+                            NavigationLink(destination:LazyView(States(countryName: "\(self.countries[i].country ?? "-")"))){
+                                Text("\(self.countries[i].country ?? "-")").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
                                 VStack(spacing:3){
                                     HStack(){
                                         Text("Total Cases:").frame(width:100, alignment: .leading)
-                                        Text("\(self.countries[i].TotalConfirmed!)").frame(width:100, alignment: .leading)
+                                        Text("\((self.countries[i].cases?.total!.formatNumber() ?? "0"))").frame(width:100, alignment: .leading)
                                     }
                                     HStack(){
                                         Text("Total Deaths:").frame(width:100, alignment: .leading)
-                                        Text("\(self.countries[i].TotalDeaths!)").frame(width:100, alignment: .leading).foregroundColor(.red)
+                                        Text("\((self.countries[i].deaths?.total?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.red)
                                     }
                                     HStack(){
                                         Text("Total Recovered:").frame(width:100, alignment: .leading)
-                                        Text("\(self.countries[i].TotalRecovered!)").frame(width:100, alignment: .leading).foregroundColor(.green)
+                                        Text("\((self.countries[i].cases?.recovered?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.green)
                                     }
-
+                                    HStack(){
+                                        Text("Critical:").frame(width:100, alignment: .leading)
+                                        Text("\((self.countries[i].cases?.critical?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.red)
+                                    }
                                     HStack(){
                                         Text("New Cases:").frame(width:100, alignment: .leading)
-                                        Text("\(self.countries[i].NewConfirmed!)").frame(width:100, alignment: .leading)
+                                        Text("\(self.countries[i].cases?.new ?? "0")").frame(width:100, alignment: .leading)
                                     }
                                     HStack(){
                                         Text("New Deaths:").frame(width:100, alignment: .leading)
-                                        Text("\(self.countries[i].NewDeaths!)").frame(width:100, alignment: .leading).foregroundColor(.red)
+                                        Text("\(self.countries[i].deaths?.new ?? "0")").frame(width:100, alignment: .leading).foregroundColor(.red)
                                     }
-                                    HStack(){
-                                        Text("New Recovered:").frame(width:100, alignment: .leading)
-                                        Text("\(self.countries[i].NewRecovered!)").frame(width:100, alignment: .leading).foregroundColor(.green)
-                                    }
-                                    }
-
+                                   
+                                }
                             }
                         }
 

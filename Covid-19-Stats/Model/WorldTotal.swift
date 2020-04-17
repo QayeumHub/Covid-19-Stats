@@ -8,27 +8,17 @@
 
 import Foundation
 
-struct WorldTotal : Identifiable, Decodable {
+struct WorldTotal: Identifiable, Decodable {
     var id:Int?
-    var Global: Global?
-    var Countries: [Countries]?
-    var Date: String?
+    var results: [WorldStats]?
 }
 
-// MARK: - Country
-struct Countries: Identifiable, Decodable {
+// MARK: - Result
+struct WorldStats : Identifiable, Decodable {
     var id:Int?
-    var Country, CountryCode, Slug: String?
-    var NewConfirmed, TotalConfirmed, NewDeaths, TotalDeaths: Int?
-    var NewRecovered, TotalRecovered: Int?
-    var Date: String?
-}
+    var total_cases, total_recovered, total_unresolved, total_deaths: Int?
+    var total_new_cases_today, total_new_deaths_today, total_active_cases, total_serious_cases: Int?
+    var total_affected_countries: Int?
 
-// MARK: - Global
-struct Global: Identifiable, Decodable {
-    var id:Int?
-    var NewConfirmed, TotalConfirmed, NewDeaths, TotalDeaths: Int?
-    var NewRecovered, TotalRecovered: Int?
 }
-
 

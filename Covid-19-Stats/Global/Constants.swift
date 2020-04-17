@@ -9,5 +9,9 @@
 import Foundation
 
 struct Constants{
- static let httpHeaderValues = ["x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com","x-rapidapi-key": "604bc200e0mshedc0744ae67a52cp188a16jsnf99178f90edd"]
+ static let headers = [
+     "x-rapidapi-host": "covid-193.p.rapidapi.com",
+     "x-rapidapi-key": "604bc200e0mshedc0744ae67a52cp188a16jsnf99178f90edd"]
 }
+
+

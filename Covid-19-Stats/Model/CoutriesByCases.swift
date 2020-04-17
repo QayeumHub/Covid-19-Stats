@@ -10,23 +10,39 @@ import Foundation
 
 struct CoutriesByCases: Identifiable, Decodable {
     var id:Int?
-    var countries_stat: [CountriesStat]?
-    var statistic_taken_at: String?
+    var response: [Response]?
 }
 
-// MARK: - CountriesStat
-struct CountriesStat: Identifiable, Decodable {
+// MARK: - Response
+struct Response : Identifiable, Decodable {
     var id:Int?
-    var country_name: String?
-    var cases: String?
-    var deaths: String?
-    var region: String?
-    var total_recovered: String?
-    var new_deaths: String?
-    var new_cases: String?
-    var serious_critical: String?
-    var active_cases: String?
-    var total_cases_per_1m_population: String?
+    var country: String?
+    var cases: Cases?
+    var deaths: Deaths?
+    var tests: Tests?
+    var day: String?
+    var time: String?
 }
+
+// MARK: - Cases
+struct Cases : Identifiable, Decodable {
+    var id:Int?
+    var new: String?
+    var active, critical, recovered, total: Int?
+}
+
+// MARK: - Deaths
+struct Deaths : Identifiable, Decodable {
+    var id:Int?
+    var new: String?
+    var total: Int?
+}
+
+// MARK: - Tests
+struct Tests: Identifiable, Decodable {
+    var id:Int?
+    var total: Int?
+}
+
 
 

@@ -19,25 +19,25 @@ class WorldStatsViewModel: ObservableObject{
         self.statsService = WorldStatsService()
         getWorldTotalData(endPoints: endPoints)
     }
-    
+ 
 
     var totalCases:String{
-        if let data = data.Global?.TotalConfirmed{
+        if let data = data.results?[0].total_cases{
             return data.formatNumber()
         }else{
             return String()
         }
     }
-    
+
     var totalRecovered:String{
-        if let data = data.Global?.TotalRecovered{
+        if let data = data.results?[0].total_recovered{
             return  data.formatNumber()
         }else{
             return String()
         }
     }
      var totalDeaths:String{
-        if let data = data.Global?.TotalDeaths{
+        if let data = data.results?[0].total_deaths{
              return data.formatNumber()
          }else{
              return String()
@@ -45,7 +45,7 @@ class WorldStatsViewModel: ObservableObject{
      }
 
     var totalNewCasesToday:String{
-        if let data = data.Global?.NewConfirmed{
+        if let data = data.results?[0].total_new_cases_today{
             return data.formatNumber()
         }else{
             return String()
@@ -53,38 +53,32 @@ class WorldStatsViewModel: ObservableObject{
     }
 
     var totalNewDeathsToday:String{
-        if let data = data.Global?.NewDeaths{
-            return data.formatNumber()
-        }else{
-            return String()
-        }
-    }
-
-    var totalNewRecoderedToday:String{
-        if let data = data.Global?.NewRecovered{
+        if let data = data.results?[0].total_new_deaths_today{
             return data.formatNumber()
         }else{
             return String()
         }
     }
     
-    var reportDate:String{
-        if let data = data.Date{
-            return Date().formatDate(dateStr: data)
+
+    var totalSeriousCases:String{
+        if let data = data.results?[0].total_serious_cases{
+            return data.formatNumber()
         }else{
             return String()
         }
     }
-
-    var coutriesTotal:[Countries]{
-        if let data = data.Countries{
-            let datasorted = data.sorted(by: {$0.TotalConfirmed! > $1.TotalConfirmed!})
-            return datasorted
+    
+    var totalActiveCases:String{
+        if let data = data.results?[0].total_active_cases{
+            return data.formatNumber()
         }else{
-            return [Countries]()
+            return String()
         }
     }
-   
+    
+
+
     
     
     
@@ -96,7 +90,7 @@ class WorldStatsViewModel: ObservableObject{
                     self.data = statsData
                     self.showProgress = false
                 }else{
-                    self.showProgress = false
+                    self.showProgress = true
                 }
             }
         }

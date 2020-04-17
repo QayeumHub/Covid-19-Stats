@@ -13,35 +13,34 @@ class WithCasesViwModel: ObservableObject{
     
     private var service: CountriesWithCasesService!
     @Published var data = CoutriesByCases()
+    @Published var showProgress = true
     
     init(endPoints:EndPoints){
         self.service = CountriesWithCasesService()
         getDate(endPoints: endPoints)
     }
     
-    var countryArrDetails:[CountriesStat]{
-        if let data = data.countries_stat {
-            let data1 = data.filter({$0.country_name != ""})
-            return data1
+    
+  
+    
+    var countryArrDetails:[Response]{
+        if let data = data.response {
+            let sortedData = data.sorted(by: {($0.cases?.total)! > ($1.cases?.total)!})
+            return sortedData
         }else{
-            return [CountriesStat]()
+            return [Response]()
         }
     }
-    
-    var createdDate: String {
-        if let date = data.statistic_taken_at {
-            return Date().formatDate(dateStr:date)
-        }else{
-            return String()
-        }
-    }
-    
-    
+
     func getDate(endPoints:EndPoints){
         service.getData(endPoints: endPoints) { (statsData) in
             DispatchQueue.main.async {
+                self.showProgress = true
                 if let statsData = statsData {
-                  self.data = statsData
+                 self.data = statsData
+                 self.showProgress = false
+                }else{
+                    self.showProgress = true
                 }
             }
         }
