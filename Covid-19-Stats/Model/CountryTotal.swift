@@ -9,20 +9,24 @@
 import Foundation
 
 
+// MARK: - TopLevel
 struct CountryTotal: Identifiable, Decodable {
     var id:Int?
-    var country: Country?
+    var error: Bool?
+    var statusCode: Int?
+    var message: String?
+    var data: DataClass?
 }
 
 // MARK: - DataClass
-struct Country: Identifiable, Decodable {
+struct DataClass : Identifiable, Decodable {
     var id:Int?
     var lastChecked: String?
-    var countryStats: [CountryStats]?
+    var covid19Stats: [StateStat]?
 }
 
 // MARK: - Covid19Stat
-struct CountryStats : Identifiable, Decodable {
+struct StateStat: Identifiable, Decodable {
     var id:Int?
     var city, province: String?
     var country: String?
@@ -30,3 +34,4 @@ struct CountryStats : Identifiable, Decodable {
     var keyID: String?
     var confirmed, deaths, recovered: Int?
 }
+
