@@ -14,13 +14,14 @@ struct HomeView: View {
                TabView(selection: $selectedView) {
                ContentView()
                    .tabItem {
-                       Image(systemName: "phone.fill")
-                       Text("Worldwide Stats")
+                       Image(systemName: "globe")
+                       Text("Worldwide")
                }.tag(0)
                CDCWebsite()
                    .tabItem {
-                       Image(systemName: "tv.fill")
-                       Text("CDC Covit-19 Info")
+                    
+                       Image(systemName: "doc.richtext")
+                       Text("CDC Latest")
                }.tag(1)
            }
     }
@@ -31,3 +32,4 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
+
