@@ -34,8 +34,7 @@ struct ContentView: View {
                 //}
                 .navigationBarTitle("Worldwide Stats", displayMode: .inline)
         }
-            
-            
+        
         .background(Color(red: 253 / 255, green: 253 / 255, blue: 253 / 255)
         .edgesIgnoringSafeArea(.all))
     }
