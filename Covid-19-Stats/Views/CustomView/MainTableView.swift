@@ -20,7 +20,7 @@ struct MainTableView: View {
                 List{
                     ForEach(countries.indices, id: \.self) { i in
                         HStack(){
-                            NavigationLink(destination:LazyView(States(countryName: "\(self.countries[i].country ?? "-")"))){
+                            //NavigationLink(destination:LazyView(States(countryName: "\(self.countries[i].country ?? "-")"))){
                                 Text("\(self.countries[i].country ?? "-")").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
                                 VStack(spacing:3){
                                     HStack(){
@@ -48,7 +48,7 @@ struct MainTableView: View {
                                         Text("\(self.countries[i].deaths?.new ?? "0")").frame(width:100, alignment: .leading).foregroundColor(.red)
                                     }
                                    
-                                }
+                             //   }
                             }
                         }
 

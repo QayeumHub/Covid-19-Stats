@@ -40,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidBecomeActive(_ scene: UIScene) {
        _ = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
+       _ = WithCasesViwModel(endPoints: EndPoints.coutriesByCases)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

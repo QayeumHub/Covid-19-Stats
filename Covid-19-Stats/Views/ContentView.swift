@@ -23,19 +23,13 @@ struct ContentView: View {
         NavigationView{
             ZStack{
                 VStack(){
+              
                     MainView(totalCases: dataVM.totalCases, totalActiveCases: dataVM.totalActiveCases, totalDeaths: dataVM.totalDeaths, totalRecovered: dataVM.totalRecovered, totalNewCasesToday: dataVM.totalNewCasesToday, totalNewDeathsToday: dataVM.totalNewDeathsToday, totalSeriousCases: dataVM.totalSeriousCases)
                     MainTableView(countries: data1VM.countryArrDetails)
                 }
-                if dataVM.showProgress{
-                    img.resizable().frame(width:50, height:50)
-                        .rotationEffect(.degrees(dataVM.showProgress ? 360: 0))
-                        .animation(Animation.linear(duration:0.8).repeatForever())
-                        .onAppear(){
-                            self.dataVM.showProgress.toggle()
-                    }
-                }else{
-                    img.hidden()
-                }
+                ActivityIndicator(isAnimating: data1VM.showProgress)
+                    .configure { $0.color = .red }
+                    .background(Color.clear)
             }
                 
             .navigationBarTitle("Covid-19-Stats", displayMode: .inline)

@@ -28,6 +28,7 @@
 		D9680219244167580083B0D5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9680218244167580083B0D5 /* Extension.swift */; };
 		D9A6866A24425B3400E38438 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6866924425B3400E38438 /* MainView.swift */; };
 		D9A6866C2442A87000E38438 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6866B2442A87000E38438 /* MainTableView.swift */; };
+		D9B90C6F244959A600590CE6 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B90C6E244959A600590CE6 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D9680218244167580083B0D5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D9A6866924425B3400E38438 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D9A6866B2442A87000E38438 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		D9B90C6E244959A600590CE6 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				D9A6866924425B3400E38438 /* MainView.swift */,
 				D9A6866B2442A87000E38438 /* MainTableView.swift */,
+				D9B90C6E244959A600590CE6 /* ActivityIndicator.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				D9A6866C2442A87000E38438 /* MainTableView.swift in Sources */,
 				D9680219244167580083B0D5 /* Extension.swift in Sources */,
+				D9B90C6F244959A600590CE6 /* ActivityIndicator.swift in Sources */,
 				D9680203244120600083B0D5 /* WithCasesViewModel.swift in Sources */,
 				D96802072441266B0083B0D5 /* CountryViewModel.swift in Sources */,
 				D906F4C82443B51500C44B41 /* States.swift in Sources */,
