@@ -39,8 +39,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-       _ = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
-       _ = WithCasesViwModel(endPoints: EndPoints.coutriesByCases)
+       //_ = WorldStatsViewModel(endPoints: EndPoints.worldsStats)
+       //_ = WithCasesViwModel(endPoints: EndPoints.coutriesByCases)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
@@ -54,6 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
+        exit(0);
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
