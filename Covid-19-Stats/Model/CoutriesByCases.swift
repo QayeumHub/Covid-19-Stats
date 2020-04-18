@@ -9,8 +9,13 @@
 import Foundation
 
 struct CoutriesByCases: Identifiable, Decodable {
-    var id:Int?
+    var id = UUID()
     var response: [Response]?
+    
+    enum CodingKeys : String, CodingKey {
+        case response
+    }
+    
 }
 
 // MARK: - Response

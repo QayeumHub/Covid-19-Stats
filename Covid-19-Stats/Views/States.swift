@@ -33,25 +33,25 @@ struct States: View {
                     //}
                     
                     List{
-                        ForEach(dataVM.statesStat.indices, id: \.self) { i in
+                        ForEach(dataVM.statesStat) { data in
                             HStack(){
-                                Text("\(self.dataVM.statesStat[i].province ?? "-")").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
+                                Text("\(data.province ?? "-")").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
                                 VStack(spacing:3){
                                     HStack(){
-                                        Text("\(self.dataVM.statesStat[i].city ?? "-")").frame(width:100, alignment: .leading).font(Font.system(size: 15))
+                                        Text("\(data.city ?? "-")").frame(width:100, alignment: .leading).font(Font.system(size: 15))
                                         Text("").frame(width:100, alignment: .leading)
                                     }
                                     HStack(){
                                         Text("Confirmed:").frame(width:100, alignment: .leading)
-                                        Text("\((self.dataVM.statesStat[i].confirmed?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading)
+                                        Text("\((data.confirmed?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading)
                                     }
                                     HStack(){
                                         Text("Recovered:").frame(width:100, alignment: .leading)
-                                        Text("\((self.dataVM.statesStat[i].recovered?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.green)
+                                        Text("\((data.recovered?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.green)
                                     }
                                     HStack(){
                                         Text("Deaths:").frame(width:100, alignment: .leading)
-                                        Text("\((self.dataVM.statesStat[i].deaths?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.red)
+                                        Text("\((data.deaths?.formatNumber() ?? "0"))").frame(width:100, alignment: .leading).foregroundColor(.red)
                                     }
                                     
                                 }

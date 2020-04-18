@@ -11,27 +11,37 @@ import Foundation
 
 // MARK: - TopLevel
 struct StatesTotal: Identifiable, Decodable {
-    var id:Int?
-    var error: Bool?
-    var statusCode: Int?
-    var message: String?
+    var id = UUID()
     var data: DataClass?
+    
+    enum CodingKeys: String, CodingKey {
+        case data
+    }
+    
+    
 }
 
 // MARK: - DataClass
 struct DataClass : Identifiable, Decodable {
-    var id:Int?
+    var id = UUID()
     var lastChecked: String?
     var covid19Stats: [StateStat]?
+    enum CodingKeys: String, CodingKey {
+        case  lastChecked, covid19Stats
+    }
 }
 
 // MARK: - Covid19Stat
 struct StateStat: Identifiable, Decodable {
-    var id:Int?
+    var id = UUID()
     var city, province: String?
     var country: String?
     var lastUpdate: String?
     var keyID: String?
     var confirmed, deaths, recovered: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case city, province,country,lastUpdate,keyID,confirmed, deaths, recovered
+    }
 }
 
