@@ -39,7 +39,7 @@ struct ListOfUSstates {
     "Mississippi",
     "Montana",
     "North Carolina",
-    " North Dakota",
+    "North Dakota",
     "Nebraska",
     "New Hampshire",
     "New Jersey",

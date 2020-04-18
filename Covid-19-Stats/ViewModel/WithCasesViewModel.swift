@@ -26,7 +26,7 @@ class WithCasesViwModel: ObservableObject{
     var countryArrDetails:[Response]{
         if let data = data.response {
             let sortedData = data.sorted(by: {($0.cases?.total)! > ($1.cases?.total)!})
-            return sortedData
+            return sortedData.filter({$0.country?.lowercased() != "all"})
         }else{
             return [Response]()
         }

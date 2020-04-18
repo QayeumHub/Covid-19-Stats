@@ -19,7 +19,8 @@ enum EndPoints {
         case .coutriesByCases:
                 return "https://covid-193.p.rapidapi.com/statistics"
         case .countryStats(let counrtyName):
-            return "https://covid19-api.weedmark.systems/api/v1/stats?country=\(counrtyName)"
+            let country = counrtyName.replacingOccurrences(of: "-", with:" ")
+            return "https://covid19-api.weedmark.systems/api/v1/stats?country=\(country)"
         }
     }
 }
