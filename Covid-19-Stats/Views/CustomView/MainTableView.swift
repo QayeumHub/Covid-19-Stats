@@ -12,7 +12,8 @@ struct MainTableView: View {
     var countries: [Response]!
     var set:Set<String>
     init(countries:[Response]){
-        set = ["Europe", "North-America", "Asia", "South-America", "S-Korea", "Saudi-Arabia","Burkina-Faso","Channel-Islands", "San-Marino","Isle-of-Man","Sri-Lanka","Oceania","Dominican-Republic","South-Africa","Bosnia-and-Herzegovina"]
+        set = ["abdul"]
+        set = ["Europe", "North-America", "Asia", "South-America", "Saudi-Arabia","Burkina-Faso","Channel-Islands", "San-Marino","Isle-of-Man","Sri-Lanka","Oceania","Dominican-Republic","South-Africa","Bosnia-and-Herzegovina"]
 
         self.countries = countries
     }

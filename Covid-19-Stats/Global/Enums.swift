@@ -19,8 +19,13 @@ enum EndPoints {
         case .coutriesByCases:
                 return "https://covid-193.p.rapidapi.com/statistics"
         case .countryStats(let counrtyName):
-            let country = counrtyName.replacingOccurrences(of: "-", with:" ")
-            return "https://covid19-api.weedmark.systems/api/v1/stats?country=\(country)"
+            var country = counrtyName.replacingOccurrences(of: "-", with:" ")
+            if country.lowercased() == "uk"{
+                country  = "United Kingdom"
+            }else if country.lowercased() == "s korea"{
+                country = "Korea, South"
+            }
+            return "https://covid19-api.weedmark.systems/api/v1/stats?country=\(country.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"
         }
     }
 }
