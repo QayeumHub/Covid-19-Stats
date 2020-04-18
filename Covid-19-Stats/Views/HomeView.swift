@@ -10,20 +10,29 @@ import SwiftUI
 
 struct HomeView: View {
     @State var selectedView = 0
+    init(){
+          //UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+          //UINavigationBar.appearance().backgroundColor = .black
+      }
     var body: some View {
+        NavigationView{
                TabView(selection: $selectedView) {
                ContentView()
                    .tabItem {
                        Image(systemName: "globe")
                        Text("Worldwide")
                }.tag(0)
-               CDCWebsite()
+               UsStatesCities()
                    .tabItem {
-                    
                        Image(systemName: "doc.richtext")
-                       Text("CDC Latest")
+                       Text("US States Cities")
                }.tag(1)
            }
+        .navigationBarTitle("Worldwide Stats", displayMode: .inline)
+
+        }
+        .background(Color(red: 253 / 255, green: 253 / 255, blue: 253 / 255)
+        .edgesIgnoringSafeArea(.all))
     }
 }
 

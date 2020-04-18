@@ -26,6 +26,7 @@
 		D968020D24412B020083B0D5 /* CoutriesByCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968020C24412B020083B0D5 /* CoutriesByCases.swift */; };
 		D968021524412BC30083B0D5 /* StatesTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D968021424412BC30083B0D5 /* StatesTotal.swift */; };
 		D9680219244167580083B0D5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9680218244167580083B0D5 /* Extension.swift */; };
+		D96946A4244BB88800CE4865 /* UsStatesCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96946A3244BB88800CE4865 /* UsStatesCities.swift */; };
 		D9956DD3244A34E50039E43C /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9956DD2244A34E50039E43C /* States.swift */; };
 		D9956DD5244A79450039E43C /* ListOfUSstates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9956DD4244A79450039E43C /* ListOfUSstates.swift */; };
 		D9A6866A24425B3400E38438 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6866924425B3400E38438 /* MainView.swift */; };
@@ -57,6 +58,7 @@
 		D968020C24412B020083B0D5 /* CoutriesByCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoutriesByCases.swift; sourceTree = "<group>"; };
 		D968021424412BC30083B0D5 /* StatesTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTotal.swift; sourceTree = "<group>"; };
 		D9680218244167580083B0D5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		D96946A3244BB88800CE4865 /* UsStatesCities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsStatesCities.swift; sourceTree = "<group>"; };
 		D9956DD2244A34E50039E43C /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		D9956DD4244A79450039E43C /* ListOfUSstates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfUSstates.swift; sourceTree = "<group>"; };
 		D9A6866924425B3400E38438 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				D906F4C72443B51500C44B41 /* CDCWebsite.swift */,
 				D9B90C7224497D3800590CE6 /* HomeView.swift */,
 				D9956DD2244A34E50039E43C /* States.swift */,
+				D96946A3244BB88800CE4865 /* UsStatesCities.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				D9B90C712449785200590CE6 /* WebView.swift in Sources */,
 				D9680219244167580083B0D5 /* Extension.swift in Sources */,
 				D9B90C6F244959A600590CE6 /* ActivityIndicator.swift in Sources */,
+				D96946A4244BB88800CE4865 /* UsStatesCities.swift in Sources */,
 				D9680203244120600083B0D5 /* WithCasesViewModel.swift in Sources */,
 				D96802072441266B0083B0D5 /* StatesViewModel.swift in Sources */,
 				D906F4C82443B51500C44B41 /* CDCWebsite.swift in Sources */,

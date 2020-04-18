@@ -34,7 +34,7 @@ struct States: View {
                             ForEach(0 ..< stateNames!.count) {
                                 Text(self.stateNames![$0]).tag($0)
                             }
-                        }
+                        }.id(1)
                         List{
                             ForEach(dataVM.statesStat.filter({$0.province == self.stateNames?[self.selectedState]})) { data in
                                 HStack(){
