@@ -10,7 +10,7 @@ import Foundation
 
 
 // MARK: - TopLevel
-struct CountryTotal: Identifiable, Decodable {
+struct StatesTotal: Identifiable, Decodable {
     var id:Int?
     var error: Bool?
     var statusCode: Int?
