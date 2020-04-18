@@ -24,7 +24,7 @@ class StatesViewModel: ObservableObject{
     var statesStat: [StateStat]{
         if let data = data.data?.covid19Stats {
             let sortedData = data.sorted(by:{$0.confirmed! > $1.confirmed!})
-            return sortedData.filter({$0.province == stateName})
+            return sortedData
         }else{
             return [StateStat]()
         }

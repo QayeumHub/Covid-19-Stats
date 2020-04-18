@@ -28,12 +28,9 @@ struct States: View {
                         ForEach(0 ..< stateNames.count) {
                             Text(self.stateNames[$0]).tag($0)
                         }
-                    }//.onTapGesture {
-                      //  self.dataVM.search(name: self.stateNames[self.selectedState])
-                    //}
-                    
+                    }
                     List{
-                        ForEach(dataVM.statesStat) { data in
+                        ForEach(dataVM.statesStat.filter({$0.province == self.stateNames[self.selectedState]})) { data in
                             HStack(){
                                 Text("\(data.province ?? "-")").font(Font.system(size: 16)).frame(maxWidth:140, alignment: .center)
                                 VStack(spacing:3){
