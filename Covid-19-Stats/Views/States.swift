@@ -14,10 +14,9 @@ struct States: View {
     @ObservedObject var dataVM: StatesViewModel
     var stateNames = ListOfUSstates.statesArr
     @State private var selectedState = 5
-    var stateName:String
+    var stateName = "California"
     init(countryName:String){
         self.countryName = countryName
-        self.stateName = "California"
         self.dataVM = StatesViewModel(endPoints: EndPoints.countryStats(countryName: countryName), stateName:stateName)
     }
     
