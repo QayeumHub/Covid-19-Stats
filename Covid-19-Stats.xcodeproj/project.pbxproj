@@ -425,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Covid-19-Stats/Preview Content\"";
 				DEVELOPMENT_TEAM = KBL432CXA8;
 				ENABLE_PREVIEWS = YES;
@@ -445,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Covid-19-Stats/Preview Content\"";
 				DEVELOPMENT_TEAM = KBL432CXA8;
 				ENABLE_PREVIEWS = YES;
