@@ -24,8 +24,8 @@ struct HomeView: View {
                }.tag(0)
                UsStatesCities()
                    .tabItem {
-                       Image(systemName: "doc.richtext")
-                       Text("US States Cities")
+                       Image(systemName: "doc.text.magnifyingglass")
+                       Text("US Counties")
                }.tag(1)
            }
         .navigationBarTitle("Worldwide Stats", displayMode: .inline)
