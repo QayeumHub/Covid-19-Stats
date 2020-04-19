@@ -436,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.agdstudio.Covid-19-Stats";
 				PRODUCT_NAME = "Covid-19-Stats";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,7 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.agdstudio.Covid-19-Stats";
 				PRODUCT_NAME = "Covid-19-Stats";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
